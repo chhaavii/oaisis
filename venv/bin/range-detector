@@ -1,4 +1,4 @@
-#!/Users/sm912r/PycharmProjects/CV/venv/bin/python
+#!/Users/macbook/Downloads/Real-Time-Object-Detection-With-OpenCV/venv/bin/python3.9
 # -*- coding: utf-8 -*-
 
 # USAGE: You need to specify a filter and "only one" image source

@@ -1,53 +1,76 @@
-# Real-Time-Object-Detection-With-OpenCV
+# oAIsis: Real-Time Object Detection
 
-### Introduction
+A real-time object detection application using OpenCV and MobileNetSSD. This project can detect common objects through your webcam and provides visual and audio feedback. The name 'oAIsis' combines 'AI' with 'Isis', the Egyptian goddess of wisdom and knowledge, symbolizing the intelligent vision capabilities of this application.
 
-This project aims to do real-time object detection through a laptop camera or webcam using OpenCV and MobileNetSSD. The idea is to loop over each frame of the video stream, detect objects like person, chair, dog, etc. and bound each detection in a box.
-Here, we will go through the steps required for setting up the project and some explanation about the code.
+## Features
 
-**Hi!**
+- Real-time object detection using pre-trained MobileNetSSD model
+- Text-to-speech feedback for detected objects
+- Simple and clean interface
+- Toggle speech output on/off
+- Lightweight and easy to set up
 
-![alt text](https://github.com/Surya-Murali/Real-Time-Object-Detection-With-OpenCV/blob/master/real_time_output_gif/real_time_output.gif)
+## Requirements
 
-### How to run this code?
+- Python 3.7+
+- OpenCV
+- NumPy
+- pyttsx3 (for text-to-speech)
 
-**Step 1:** Create a directory in your local machine and cd into it
+## Installation
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/oAIsis.git
+   cd oAIsis
+   ```
+
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   Or install them manually:
+   ```bash
+   pip install opencv-python numpy pyttsx3
+   ```
+
+3. Download the pre-trained model files if needed:
+   - `MobileNetSSD_deploy.prototxt.txt`
+   - `MobileNetSSD_deploy.caffemodel`
+
+## Usage
+
+Run the detection script:
+```bash
+python working_detection.py
 ```
-mkdir ~/Desktop/opencv_project
-cd ~/Desktop/opencv_project
-```
 
-**Step 2:** Clone the repository and cd into the folder:
+### Controls
+- Press 'q' to quit the application
+- Press 's' to toggle speech output on/off
 
-```
-git clone https://github.com/Surya-Murali/Real-Time-Object-Detection-With-OpenCV.git
-cd Real-Time-Object-Detection-With-OpenCV
-```
-**Step 3:** Install all the necessary libraries. I used MacOS for this project. These are some of the libraries I had to install:
+## Files
 
-```
-brew install opencv
-pip install opencv-python
-pip install opencv-contrib-python
-pip install opencv-python-headless
-pip install opencv-contrib-python-headless
-pip install matplotlib
-pip install imutils
-```
+- `working_detection.py` - Main detection script
+- `MobileNetSSD_deploy.prototxt.txt` - Model architecture definition
+- `MobileNetSSD_deploy.caffemodel` - Pre-trained model weights
+- `requirements.txt` - Python dependencies
 
-Make sure to download and install opencv and and opencv-contrib releases for OpenCV 3.3. This ensures that the deep neural network (dnn) module is installed. You must have OpenCV 3.3 (or newer) to run this code.
+## Notes
 
-**Step 4:** Make sure you have your video devices connected (e.g. Webcam, FaceTime HD Camera, etc.). You can list them by typing this in your terminal
+- The application uses your default webcam (index 0). If you have multiple cameras, you may need to modify the script.
+- For best performance, ensure good lighting conditions when running the detection.
+- The model can detect 20 different object categories including person, car, chair, etc.
 
-```
-system_profiler SPCameraDataType
-system_profiler SPCameraDataType | grep "^    [^ ]" | sed "s/    //" | sed "s/://"
-```
+## License
 
-**Step 5:** To start your video stream and real-time object detection, run the following command:
+This project is open source and available under the [MIT License](LICENSE).
 
-```
+## Acknowledgments
+
+- OpenCV team for the excellent computer vision library
+- The creators of MobileNetSSD for the pre-trained model
 python real_time_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
 ```
 
@@ -63,3 +86,4 @@ python real_time_object_detection.py --help
 * https://github.com/opencv/opencv
 * https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works/
 * https://github.com/jrosebr1/imutils
+* https://github.com/Surya-Murali/Real-Time-Object-Detection-With-OpenCV

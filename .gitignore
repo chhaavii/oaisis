@@ -3,6 +3,41 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.venv
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Model files (large binary files)
+*.caffemodel
+*.weights
+*.pb
+*.tflite
+
+# Output files
+*.avi
+*.mp4
+*.gif
+output/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# OS specific
+.DS_Store
+Thumbs.db
+
 # C extensions
 *.so
 
